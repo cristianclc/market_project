@@ -4,3 +4,5 @@ DEFAULT_CURRENCY = "usd"
 DEFAULT_PER_PAGE = 100
 DEFAULT_ORDER = "market_cap_desc"
 DEFAULT_PAGES = 1
+GCS_BUCKET = "crypto-market-analysis-project-clc"
+RAW_PREFIX = "raw"
