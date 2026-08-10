@@ -12,7 +12,7 @@ def upload_file(source_file_path: Path, destination_path: str):
     #source_file es el archivo que vamos a subir
     #destination_path es como una especia de dirección en el bucket para nuestro archivo
 
-    if not source_file_path.exists(): #exists es eun métodod de la clse path para verificar que exista
+    if not source_file_path.exists(): #exists es un método de la clse path para verificar que exista
         raise FileNotFoundError()
 
     bucket = storage_client.bucket(GCS_BUCKET) #le damos la referencia a la bucket
