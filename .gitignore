@@ -2,3 +2,4 @@ data/
 .venv/
 credentials/
 **/__pycache__/
+dbt/logs
