@@ -4,7 +4,7 @@ from google.cloud import bigquery
 
 client = bigquery.Client()
 
-def bigquery_load_from_gcs(uri: str, table_id:str): #uri es el enlace del ndjson en gcs, table_id es la tabla donde se va a subiren bigquery
+def bigquery_load_from_gcs(uri: str, table_id:str): #uri es el enlace del ndjson en gcs, table_id es la tabla donde se va a subir en bigquery
     # table_id = "your-project.your_dataset.your_table_name
     job_config = bigquery.LoadJobConfig( 
         autodetect=True, #schema del json

@@ -16,7 +16,7 @@ def upload_file(source_file_path: Path, destination_path: str):
         raise FileNotFoundError()
 
     bucket = storage_client.bucket(GCS_BUCKET) #le damos la referencia a la bucket
-    blob = bucket.blob(destination_path) #le damos la referencia del blob de nuestra bucket
+    blob = bucket.blob(destination_path) #crea un objeto blob (archivo) en el destination_path
 
     blob.upload_from_filename(source_file_path) #cargamos desde el archivo en local al bucket
 

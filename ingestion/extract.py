@@ -30,6 +30,7 @@ def main():
     ndjson_transform(json_route, route_to_staged / f'market_snapshot_{date_name}.ndjson', cur_date) #transformamos el json que acabamos de crear a ndjson
     ndjson_route = route_to_staged / f'market_snapshot_{date_name}.ndjson'
 
+    # CARGA A GCS
     upload_file(json_route, f"{RAW_PREFIX}/year={cur_date.year}/month={cur_date.month:02d}/day={cur_date.day:02d}/{json_route.name}") #hacemos el upload en gcs, le pasamos la ruta del archivo y la ruta final en gcs
     upload_file(ndjson_route, f"{STAGED_PREFIX}/year={cur_date.year}/month={cur_date.month:02d}/day={cur_date.day:02d}/{ndjson_route.name}") #uplead al staged
 

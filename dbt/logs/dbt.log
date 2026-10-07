@@ -1,0 +1,131 @@
+[0m11:44:39.927772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0E9981BE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0EC0DFED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0EC0DF890>]}
+
+
+============================== 11:44:39.932704 | 52e433c9-e5c2-4b00-b211-19ff9134cda4 ==============================
+[0m11:44:39.932704 [info ] [MainThread]: Running with dbt=1.12.0
+[0m11:44:39.933430 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\CRISTIAN\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt init market_project', 'log_path': 'logs'}
+[0m11:44:39.973481 [debug] [MainThread]: Starter project path: C:\Users\CRISTIAN\Desktop\market_project\.venv\Lib\site-packages\dbt\include\starter_project
+[0m11:44:39.997850 [info ] [MainThread]: Setting up your profile.
+[0m11:49:58.049667 [info ] [MainThread]: Profile market_project written to C:\Users\CRISTIAN\.dbt\profiles.yml using target's profile_template.yml and your supplied values.
+[0m11:49:58.057678 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m11:49:58.058512 [info ] [MainThread]: dbt version: 1.12.0
+[0m11:49:58.058872 [info ] [MainThread]: python version: 3.13.5
+[0m11:49:58.059198 [info ] [MainThread]: python path: C:\Users\CRISTIAN\Desktop\market_project\.venv\Scripts\python.exe
+[0m11:49:58.059508 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m11:49:58.136540 [info ] [MainThread]: Using profiles dir at C:\Users\CRISTIAN\.dbt
+[0m11:49:58.137634 [info ] [MainThread]: Using profiles.yml file at C:\Users\CRISTIAN\.dbt\profiles.yml
+[0m11:49:58.138106 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\CRISTIAN\Desktop\market_project\dbt\market_project\dbt_project.yml
+[0m11:49:58.138565 [info ] [MainThread]: adapter type: bigquery
+[0m11:49:58.138888 [info ] [MainThread]: adapter version: 1.12.0
+[0m11:49:58.239684 [info ] [MainThread]: Configuration:
+[0m11:49:58.240648 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:49:58.241095 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:49:58.241497 [info ] [MainThread]: Required dependencies:
+[0m11:49:58.241861 [debug] [MainThread]: Executing "git --help"
+[0m11:49:58.282081 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:49:58.282614 [debug] [MainThread]: STDERR: "b''"
+[0m11:49:58.283002 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:49:58.283388 [info ] [MainThread]: Connection:
+[0m11:49:58.283788 [info ] [MainThread]:   method: service-account
+[0m11:49:58.284186 [info ] [MainThread]:   database: crypto-market-analysis-504021
+[0m11:49:58.284575 [info ] [MainThread]:   execution_project: crypto-market-analysis-504021
+[0m11:49:58.284893 [info ] [MainThread]:   schema: crypto_analytics
+[0m11:49:58.285201 [info ] [MainThread]:   location: US
+[0m11:49:58.285504 [info ] [MainThread]:   priority: interactive
+[0m11:49:58.285810 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m11:49:58.286112 [info ] [MainThread]:   reservation: None
+[0m11:49:58.286414 [info ] [MainThread]:   impersonate_service_account: None
+[0m11:49:58.286714 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m11:49:58.287035 [info ] [MainThread]:   job_retries: 1
+[0m11:49:58.287338 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m11:49:58.287643 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m11:49:58.287947 [info ] [MainThread]:   job_link_info_level_log: False
+[0m11:49:58.288251 [info ] [MainThread]:   timeout_seconds: 300
+[0m11:49:58.288586 [info ] [MainThread]:   client_id: None
+[0m11:49:58.288981 [info ] [MainThread]:   token_uri: None
+[0m11:49:58.289387 [info ] [MainThread]:   compute_region: None
+[0m11:49:58.289794 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m11:49:58.290203 [info ] [MainThread]:   gcs_bucket: None
+[0m11:49:58.290518 [info ] [MainThread]:   dataproc_batch: None
+[0m11:49:58.291079 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m11:49:58.842267 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m11:49:58.842701 [debug] [MainThread]: On debug: select 1 as id
+[0m11:49:58.843052 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:49:58.843441 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 2] No such file or directory: 'credentials\\gcp_key.json''
+[0m11:49:58.843792 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m11:49:58.844068 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 2] No such file or directory: 'credentials\\gcp_key.json'
+[0m11:49:58.844344 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m11:49:58.845342 [info ] [MainThread]: [31m1 check failed:[0m
+[0m11:49:58.846076 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m11:49:58.846671 [info ] [MainThread]: Your new dbt project "market_project" was created!
+Initialized new project in C:\Users\CRISTIAN\Desktop\market_project\dbt\market_project\market_project
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:49:58.847103 [info ] [MainThread]: [31mYour profile may need adjustments. You can find the logs of `dbt debug` above[0m
+[0m11:49:58.849113 [debug] [MainThread]: Command `dbt init` succeeded at 11:49:58.847947 after 319.11 seconds
+[0m11:49:58.849566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E08EE41BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E08EE716D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E08EE556A0>]}
+[0m11:49:58.849971 [debug] [MainThread]: Flushing usage events
+[0m11:50:00.505931 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:50:36.975680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF5E245BE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF6099FED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF6099F890>]}
+
+
+============================== 11:50:36.979829 | 7ffd289e-633e-4ab8-b2e6-f277810fadb7 ==============================
+[0m11:50:36.979829 [info ] [MainThread]: Running with dbt=1.12.0
+[0m11:50:36.980477 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\CRISTIAN\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'logs'}
+[0m11:50:36.998317 [info ] [MainThread]: dbt version: 1.12.0
+[0m11:50:36.998960 [info ] [MainThread]: python version: 3.13.5
+[0m11:50:36.999461 [info ] [MainThread]: python path: C:\Users\CRISTIAN\Desktop\market_project\.venv\Scripts\python.exe
+[0m11:50:36.999905 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m11:50:37.905812 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.postgres'
+[0m11:50:37.906933 [info ] [MainThread]: Using profiles dir at C:\Users\CRISTIAN\.dbt
+[0m11:50:37.907433 [info ] [MainThread]: Using profiles.yml file at C:\Users\CRISTIAN\.dbt\profiles.yml
+[0m11:50:37.907803 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\CRISTIAN\Desktop\market_project\dbt\dbt_project.yml
+[0m11:50:37.908275 [info ] [MainThread]: Configuration:
+[0m11:50:37.908772 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m11:50:37.909159 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m11:50:37.909549 [info ] [MainThread]: Required dependencies:
+[0m11:50:37.909932 [debug] [MainThread]: Executing "git --help"
+[0m11:50:37.946806 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:50:37.947343 [debug] [MainThread]: STDERR: "b''"
+[0m11:50:37.947717 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:50:37.948100 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m11:50:37.948505 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m11:50:37.948834 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "postgres", target "dev" invalid: Runtime Error
+    Could not find adapter type postgres!
+
+
+[0m11:50:37.949171 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\CRISTIAN\Desktop\market_project\dbt\dbt_project.yml> not found
+
+[0m11:50:37.950091 [debug] [MainThread]: Command `dbt debug` failed at 11:50:37.949976 after 1.14 seconds
+[0m11:50:37.950441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF0222CE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF0220A450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF02215260>]}
+[0m11:50:37.950809 [debug] [MainThread]: Flushing usage events
+[0m11:50:38.594056 [debug] [MainThread]: An error was encountered while trying to flush usage events
