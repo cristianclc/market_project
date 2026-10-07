@@ -3,6 +3,11 @@
 from google.cloud import storage
 from config.constants import GCS_BUCKET #nombre del bucket
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+load_dotenv() #cargamos las variable de entorno
+os.getenv("GOOGLE_APPLICATION_CREDENTIALS") #cargamos la variable de entorno con el service account
 
 storage_client = storage.Client() #conectamos el cliente, la referencia el proyecto al tiene el json del service accout
 
