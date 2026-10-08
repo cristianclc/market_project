@@ -1,6 +1,6 @@
 sources:
   - name: crypto_raw #nombre que le damos a este source 
     database: crypto-market-analysis-504021 #proyecto de gcp
-    schema: crypto_raw #nombre de dataset
+    schema: crypto_raw #nombre de dataset en gcp
     tables: 
       - name: market_snapshot #nombre de tabla
