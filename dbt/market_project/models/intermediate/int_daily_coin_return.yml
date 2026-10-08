@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: int_daily_coin_return
+    description: "Tabla de intermediate con retorno diario y porcentaje por moneda"
+    config:
+      materialized: view
+    columns:
+      - name: coin_id 
+        data_tests:
+          - not_null
+      - name: current_price 
+        data_tests:
+          - not_null
+      - name: snapshot_date 
+        data_tests:
+          - not_null
+      - name: daily_price_change
+        description: "Cambio en precio con respecto al último registro"
+      - name: daily_price_change_pct
+        description: "Cambio en precio con respecto al último registro PCT"
+      - name: daily_volume_change
+        description: "Cambio en volumen con respecto al último registro"
+      - name: daily_volume_change_pct
+        description: "Cambio en volumen con respecto al último registro PCT"
+      - name: daily_market_cap_change
+        description: "Cambio en market_cap con respecto al último registro"
+      - name: daily_market_cap_change_pct
+        description: "Cambio en market_cap con respecto al último registro PCT"
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+            - coin_id
+            - snapshot_date

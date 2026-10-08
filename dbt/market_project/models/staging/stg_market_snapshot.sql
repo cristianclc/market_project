@@ -2,8 +2,8 @@
 
 with 
 
-source as (
-    select * from  {{source('crypto_raw','market_snapshot')}} --seleccionamos todo de nuestra fuente en crypto_raw
+source as ( --se usa name, no schema en primer parámetro de source
+    select * from  {{source('crypto_raw','market_snapshot')}} --seleccionamos todo de nuestra fuente en crypto_raw.market_snapshot
 ),
 
 renamed_table as ( --no seleccionamos, images ni roi 
