@@ -1,6 +1,18 @@
+# configuramos lña fuente de los datos, en este caso está en gcp, 
+
 sources:
   - name: crypto_raw #nombre que le damos a este source 
     database: crypto-market-analysis-504021 #proyecto de gcp
     schema: crypto_raw #nombre de dataset en gcp
     tables: 
-      - name: market_snapshot #nombre de tabla
+      - name: market_snapshot #nombre de tabla en bigquery
+        columns:
+          - name: id 
+            data_tests:
+              - not_null
+          - name: current_price 
+            data_tests:
+              - not_null
+          - name: snapshot_date 
+            data_tests:
+              - not_null
