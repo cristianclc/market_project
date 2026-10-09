@@ -16,10 +16,14 @@ renamed_table as ( --no seleccionamos, images ni roi
     name as coin_name,
 
     current_price,
-    market_cap,
+
+    -- renamed
+    market_cap as coin_market_cap,
     market_cap_rank,
     fully_diluted_valuation,
-    total_volume,
+
+    -- renamed
+    total_volume as coin_total_volume,
 
     -- renamed
     high_24h as highest_value_24h,

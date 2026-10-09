@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: fct_market_daily
+    description: "una fila por día, con el total del mercado. Responde “¿cuál es la participación de Bitcoin?” y “¿cómo cambió el volumen total?”" 
+    config:
+      materialized: table
+    columns:
+      - name: snapshot_date 
+        data_tests:
+          - not_null
+          - unique
