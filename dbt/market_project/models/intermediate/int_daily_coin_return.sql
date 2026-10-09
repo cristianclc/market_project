@@ -9,7 +9,8 @@ with stg_market_snapshot as (
         last_updated,
         current_price,
         coin_total_volume,
-        coin_market_cap
+        coin_market_cap,
+        coin_market_cap_rank
     from {{ref('stg_market_snapshot')}}
 ),
 

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fct_coin_performance_7d
+    description: "métricas calculadas sobre “los últimos 7 días hasta esa fecha” (una ventana móvil)" 
+    config:
+      materialized: table
+    columns:
+      - name: snapshot_date 
+        data_tests:
+          - not_null

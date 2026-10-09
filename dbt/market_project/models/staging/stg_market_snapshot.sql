@@ -19,7 +19,7 @@ renamed_table as ( --no seleccionamos, images ni roi
 
     -- renamed
     market_cap as coin_market_cap,
-    market_cap_rank,
+    market_cap_rank as coin_market_cap_rank,
     fully_diluted_valuation,
 
     -- renamed
