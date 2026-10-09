@@ -35,10 +35,11 @@ def main():
     upload_file(ndjson_route, f"{STAGED_PREFIX}/year={cur_date.year}/month={cur_date.month:02d}/day={cur_date.day:02d}/{ndjson_route.name}") #uplead al staged
 
 
-    # CARGA A BIGQUERY
+    # CARGA A BIGQUERY DESDE GCS
     table_name = f"{PROJECT_ID}.crypto_raw.market_snapshot"
 
     bigquery_load_from_gcs(f"gs://{GCS_BUCKET}/{STAGED_PREFIX}/year={cur_date.year}/month={cur_date.month:02d}/day={cur_date.day:02d}/{ndjson_route.name}", table_name) #se carga a bigquery
+    #primer parámetro es ubicación en GCS, segundo es la tabla en BIGQUERY
     
 if __name__ == "__main__":
     main()
