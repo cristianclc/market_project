@@ -1,0 +1,37 @@
+name: daily_snapshot
+run-name: snapshot diaria del top 100 monedas del mercado
+on: 
+    schedule:
+        - cron: '0 6 * * *'
+          timezone: "America/Bogota"
+    workflow_dispatch:
+jobs: 
+    extract_transform:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Clona el repo
+              uses: actions/checkout@v4
+
+            - name: Configura python    
+              uses: actions/setup-python@v5
+              with:
+                python-version: "3.13.5"
+
+            - name: Instalar dependencias
+              run: pip install -r requirements.txt
+
+            - name: Autenticación con google cloud
+              uses: google-github-actions/auth@v3
+              with:
+                credentials_json: '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}'     
+                
+            - name: Ejecutar extracción de snapshot
+              run: python -m ingestion.extract
+                
+            - name: DBT deps
+              working-directory: dbt/market_project
+              run: dbt deps
+
+            - name: DBT build
+              working-directory: dbt/market_project
+              run: dbt build
