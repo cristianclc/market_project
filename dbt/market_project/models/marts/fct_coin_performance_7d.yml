@@ -9,3 +9,22 @@ models:
       - name: snapshot_date 
         data_tests:
           - not_null
+      - name: coin_id 
+        data_tests:
+          - not_null
+      - name: positive_return_count_7d
+        data_tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 7
+      - name: return_7d_rank
+        data_tests:
+          - dbt_utils.accepted_range:
+              min_value: 1
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - coin_id  
+              - snapshot_date
+

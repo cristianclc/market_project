@@ -8,7 +8,7 @@ with int_daily_coin_return as (
 vol_cap_total as (
     SELECT
     snapshot_date,
-    COUNT(DISTINCT(coin_id)) as coins_day,
+    COUNT(DISTINCT(coin_id)) as coins_day, --numero de monedas distintas en el snapshot del día
     SUM(coin_total_volume) as total_volume, --valor total de todas las compras (en un dia)
     SUM(coin_market_cap) as total_market_cap, --valor total de todas las monedas (en un dia)
     SUM(CASE WHEN coin_id = "bitcoin" THEN coin_market_cap ELSE 0 END) as bitcoin_total_market_cap --valor total SOLO de bitcoin
