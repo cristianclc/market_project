@@ -4,7 +4,7 @@ market_project:
       dataset: crypto_analytics #dataset en bigquery donde se crea todo el staging, intermediate y marts
       job_execution_timeout_seconds: 300
       job_retries: 1
-      keyfile: {{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
       location: us-east1
       method: service-account
       priority: interactive
